@@ -1,0 +1,20 @@
+IP Intelligence Service
+Copyright 2026 the IP Intelligence Service contributors
+
+This repository contains source code for downloading and querying data from
+third-party providers. Their data is not licensed under the Apache License 2.0.
+Generated databases and threat-intelligence snapshots are intentionally
+excluded from this repository.
+
+This product includes GeoLite Data created by MaxMind, available from
+https://www.maxmind.com.
+
+DB-IP Lite data is provided by DB-IP.com under the Creative Commons
+Attribution 4.0 International License. See https://db-ip.com/db/lite.php.
+
+Spamhaus DROP data is provided by The Spamhaus Project SLU under the DROP
+Lists Terms of Use. See
+https://www.spamhaus.org/blocklists/drop-fair-use-policy/.
+
+Cloud network ranges remain subject to the terms of their respective
+providers. Source URLs and provider identities are preserved by the updater.

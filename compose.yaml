@@ -1,0 +1,26 @@
+services:
+  ip-intelligence:
+    build:
+      context: .
+    image: ip-intelligence:latest
+    container_name: ip-intelligence
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:${IP_INTELLIGENCE_PORT:-18080}:8080"
+    volumes:
+      - ./data/geoip:/data/geoip:ro
+      - ./data/rules:/data/rules:ro
+    healthcheck:
+      test: ["CMD", "/ip-intelligence", "healthcheck"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    read_only: true
+    tmpfs:
+      - /tmp:size=1m,mode=1777

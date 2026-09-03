@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily update of Spamhaus DROP threat data
+
+[Timer]
+OnCalendar=*-*-* 04:55:00 Asia/Shanghai
+RandomizedDelaySec=10m
+Persistent=true
+Unit=ip-intelligence-update@threat.service
+
+[Install]
+WantedBy=timers.target

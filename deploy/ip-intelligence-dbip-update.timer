@@ -1,0 +1,11 @@
+[Unit]
+Description=Monthly update of DB-IP Lite fallback databases
+
+[Timer]
+OnCalendar=*-*-03 04:40:00 Asia/Shanghai
+RandomizedDelaySec=10m
+Persistent=true
+Unit=ip-intelligence-update@dbip.service
+
+[Install]
+WantedBy=timers.target

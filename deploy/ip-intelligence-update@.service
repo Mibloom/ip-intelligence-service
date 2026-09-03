@@ -1,0 +1,11 @@
+[Unit]
+Description=Update IP intelligence data (%i)
+Wants=network-online.target
+After=network-online.target docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/ip-intelligence-service
+ExecStart=/opt/ip-intelligence-service/deploy/refresh-data.sh %i
+TimeoutStartSec=10min

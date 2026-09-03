@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily update of MaxMind GeoLite2 databases
+
+[Timer]
+OnCalendar=*-*-* 04:25:00 Asia/Shanghai
+RandomizedDelaySec=10m
+Persistent=true
+Unit=ip-intelligence-update@maxmind.service
+
+[Install]
+WantedBy=timers.target

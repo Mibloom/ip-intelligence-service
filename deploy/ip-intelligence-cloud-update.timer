@@ -1,0 +1,11 @@
+[Unit]
+Description=Daily update of official cloud IP ranges
+
+[Timer]
+OnCalendar=*-*-* 04:10:00 Asia/Shanghai
+RandomizedDelaySec=10m
+Persistent=true
+Unit=ip-intelligence-update@cloud.service
+
+[Install]
+WantedBy=timers.target
